@@ -1,55 +1,41 @@
-IPTV ERD Player & M3U Editor
+# IPTV ERD Player & M3U Editor – Portable Windows App
 
-IPTV ERD Player & M3U Editor is a powerful all-in-one desktop application designed for IPTV playlist management, channel monitoring, and media playback. It enables users to import, edit, organize, validate, and stream IPTV content from M3U playlists through a modern and intuitive interface.
+A standalone, offline desktop app for managing IPTV playlists. Import M3U/M3U8 files, edit channels, watch streams, and automatically find out which channels still work and which need to be replaced.
 
-Built for IPTV administrators, providers, and advanced users, the application combines playlist editing, stream health monitoring, and live playback into a single efficient solution.
+## Features
 
-Key Features
-Import and manage M3U playlists
-Display all channels without automatic filtering
-Built-in IPTV player for instant stream playback
-Real-time stream availability checking
-Automatic detection of offline or broken channels
-Channel replacement and stream updating tools
-Fast channel search and filtering
-Dark Mode interface
-Support for custom IPTV categories and channel groups
-User-friendly desktop experience optimized for Windows
-eSports Channel Support
+- **M3U / M3U8 import and export** – load playlists from a file or URL and export a clean standard playlist
+- **Full playlist editor** – edit channel names, stream URLs, logos and groups; duplicate, reorder and delete channels
+- **Batch editing** – rename, change category, and search & replace across many channels at once
+- **Built-in HLS player** – watch live streams while you edit, with no external player needed
+- **Channel tester** – checks every channel and marks it as *Online* or *For replacement*, with the reason (HTTP 404, timeout, empty response, broken HLS segment, and so on)
+  - Adjustable timeout and number of parallel checks, with a stop button
+  - Filter channels by status
+  - Export only working channels, or only the ones that need replacement
+  - Delete all offline channels in one click
+- **Fully portable** – no installation, no local server. Playlists and settings are stored in the `IPTV-ERD-Data` folder next to the app, so you can carry it on a USB drive
 
-The application includes dedicated support for popular eSports and gaming-related IPTV streams, including:
+## Download
 
-Counter-Strike 2 (CS2)
-League of Legends
-Valorant
-Dota 2
-Rocket League
-Red Bull Gaming
+| File | Description |
+|------|-------------|
+| `IPTV-ERD-Player-Portable.exe` | Single-file portable app (about 94 MB). It unpacks on first launch, so the first start is a bit slower. |
+| `IPTV-ERD-Player-Portable-Folder.zip` | Unzipped folder version. Starts instantly. Run `IPTV-ERD-Player.exe`. |
 
-This allows users to quickly access competitive gaming broadcasts and live event streams from a centralized platform.
+## Requirements
 
-Playlist Monitoring
+- Windows 10 or Windows 11, 64-bit
+- Internet connection for the streams themselves (the app works offline)
 
-IPTV ERD Player & M3U Editor continuously analyzes playlist health and provides real-time status indicators:
+## Notes
 
-🟢 Online Channels
-🔴 Channels Requiring Replacement
-📊 Total Channel Count
-⚠ Stream Availability Alerts
+- The app is **not code-signed**, so Windows SmartScreen may show a warning. Click **More info → Run anyway**.
+- Some antivirus software may flag unsigned executables. If the file is removed, restore it from quarantine and add an exclusion.
+- Streams using RTMP, UDP or RTSP cannot be verified by the channel tester and stay marked as *untested*.
+- If a working channel is marked "For replacement", try a longer timeout (15 s). Some providers are slow or block by IP, user agent or referrer.
 
-These monitoring tools help maintain reliable and up-to-date IPTV playlists with minimal manual effort.
+## Built with
 
-Windows Desktop Application
-
-The software is designed to be distributed as a standalone Windows executable (EXE), requiring no complex setup or additional software installation. All playlist management, diagnostics, and playback features are integrated into a single lightweight desktop application.
-
-Ideal For
-IPTV administrators
-IPTV service providers
-Playlist editors
-Advanced IPTV users
-Sports and eSports enthusiasts
-Stream management teams
-Mission
-
-IPTV ERD Player & M3U Editor simplifies IPTV playlist maintenance by combining playlist editing, stream verification, channel management, and live playback into one fast, reliable, and user-friendly platform.
+React, TypeScript, Vite, Tailwind CSS, hls.js and Electron. 
+DONATE REVOLUT 
+ revolut.me/krasimqfn
